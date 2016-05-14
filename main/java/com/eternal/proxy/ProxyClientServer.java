@@ -1,5 +1,7 @@
 package com.eternal.proxy;
 
+import com.eternal.EternalTabs;
+
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -11,13 +13,15 @@ public class ProxyClientServer {
 	
 	public void registerClient() {}
 	public void clientInit(FMLInitializationEvent event) {}
-	public void clientPreInit(FMLPreInitializationEvent event) {}
+	public void clientPreInit() {}
 	
     @EventHandler
     public static void init(FMLInitializationEvent event) {}
     
     @EventHandler
-    public static void preInit(FMLPreInitializationEvent event) {}
+    public static void preInit(FMLPreInitializationEvent event) {
+		EternalTabs.init();    
+    }
     
     @EventHandler
     public static void postInit(FMLPostInitializationEvent event) {}
