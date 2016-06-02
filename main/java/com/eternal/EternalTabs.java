@@ -3,12 +3,14 @@ package com.eternal;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class EternalTabs extends CreativeTabs {
 	
 	public static final EternalTabs blocks = new EternalTabs("eternal.blocks");
+	public static final EternalTabs items = new EternalTabs("eternal.items");
 
 	public Item item;
 	
@@ -35,5 +37,6 @@ public class EternalTabs extends CreativeTabs {
 	
 	public static void init() {
 		blocks.setIcon(Blocks.anvil);
+		items.setIcon(Items.diamond);
 	}
 }

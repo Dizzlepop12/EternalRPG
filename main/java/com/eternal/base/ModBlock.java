@@ -2,7 +2,7 @@ package com.eternal.base;
 
 import java.util.Random;
 
-import com.dizzleAPI.DizzleShortcuts;
+import com.dizzleAPI.Sc;
 import com.eternal.EternalBlocks;
 import com.eternal.EternalRPG;
 import com.eternal.EternalTabs;
@@ -91,7 +91,7 @@ public class ModBlock extends Block {
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		if(drop == null) return DizzleShortcuts.itemToBlock(this);
+		if(drop == null) return Sc.itemToBlock(this);
 		return drop;
 	}
 
