@@ -2,6 +2,7 @@ package com.eternal.base;
 
 import java.util.Random;
 
+import com.dizzleAPI.DizzleShortcuts;
 import com.eternal.EternalBlocks;
 import com.eternal.EternalRPG;
 import com.eternal.EternalTabs;
@@ -21,7 +22,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EternalBlock extends Block {
+public class ModBlock extends Block {
 
 	private EnumMaterial blockType;
 	private Item drop = null;
@@ -31,27 +32,27 @@ public class EternalBlock extends Block {
 	public String name;
 	private boolean isOpaque = true, isNormalCube = true;
 	
-	public EternalBlock(String name, String finalName, float hardness) {
+	public ModBlock(String name, String finalName, float hardness) {
 		this(EnumMaterial.ROCK, name, finalName, hardness, EternalTabs.blocks);
 	}
 
-	public EternalBlock(String name, String finalName) {
+	public ModBlock(String name, String finalName) {
 		this(EnumMaterial.ROCK, name, finalName, 2.0F, EternalTabs.blocks);
 	}
 
-	public EternalBlock(EnumMaterial type, String name, String finalName, float hardness) {
+	public ModBlock(EnumMaterial type, String name, String finalName, float hardness) {
 		this(type, name, finalName, hardness, EternalTabs.blocks);
 	}
 
-	public EternalBlock(String name, String finalName, boolean breakable, CreativeTabs tab) {
+	public ModBlock(String name, String finalName, boolean breakable, CreativeTabs tab) {
 		this(EnumMaterial.ROCK, name, finalName, tab);
 	}
 
-	public EternalBlock(String name, String finalName, boolean breakable) {
+	public ModBlock(String name, String finalName, boolean breakable) {
 		this(name, finalName, breakable, EternalTabs.blocks);
 	}
 
-	public EternalBlock(EnumMaterial blockType, String name, String finalName, CreativeTabs tab) {
+	public ModBlock(EnumMaterial blockType, String name, String finalName, CreativeTabs tab) {
 		super(blockType.getBlockType());
 		RegistryLang.addBlock(name, finalName);
 		this.blockType = blockType;
@@ -65,7 +66,7 @@ public class EternalBlock extends Block {
 		GameRegistry.registerBlock(this, name);
 	}
 
-	public EternalBlock(EnumMaterial blockType, String name, String finalName, float hardness, CreativeTabs tab) {
+	public ModBlock(EnumMaterial blockType, String name, String finalName, float hardness, CreativeTabs tab) {
 		super(blockType.getBlockType());
 		RegistryLang.addBlock(name, finalName);
 		this.blockType = blockType;
@@ -90,11 +91,11 @@ public class EternalBlock extends Block {
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		if(drop == null) return EternalRPG.itemToBlock(this);
+		if(drop == null) return DizzleShortcuts.itemToBlock(this);
 		return drop;
 	}
 
-	public EternalBlock setHarvestLevel(EnumTool tool) {
+	public ModBlock setHarvestLevel(EnumTool tool) {
 		setHarvestLevel(tool.getType(), tool.getLevel());
 		return this;
 	}
