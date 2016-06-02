@@ -24,8 +24,8 @@ public class VillageComponentAlchemist extends StructureVillagePieces.Village {
 		this.boundingBox = par4StructureBoundingBox; 
 	} 
 
-	public static final WeightedRandomChestContent[] candleshopChest = { 
-			new WeightedRandomChestContent(Items.sugar, 0, 1, 4, 85), 
+	public static final WeightedRandomChestContent[] test = { 
+			new WeightedRandomChestContent(Items.apple, 0, 1, 4, 85), 
 			new WeightedRandomChestContent(Items.book, 0, 1, 2, 35), 
 			new WeightedRandomChestContent(Items.flint_and_steel, 0, 1, 1, 2) }; 
 	private boolean hasMadeChest; 
@@ -33,13 +33,13 @@ public class VillageComponentAlchemist extends StructureVillagePieces.Village {
 	@Override
 	protected void writeStructureToNBT(NBTTagCompound par1NBTTagCompound) { 
 		super.writeStructureToNBT(par1NBTTagCompound); 
-		par1NBTTagCompound.setBoolean("MCIS_createdChest", this.hasMadeChest); 
+		par1NBTTagCompound.setBoolean("alchemistCreatedChest", this.hasMadeChest); 
 	} 
 
 	@Override
 	protected void readStructureFromNBT(NBTTagCompound par1NBTTagCompound) { 
 		super.readStructureFromNBT(par1NBTTagCompound); 
-		this.hasMadeChest = par1NBTTagCompound.getBoolean("MCIS_createdChest"); 
+		this.hasMadeChest = par1NBTTagCompound.getBoolean("alchemistCreatedChest"); 
 	} 
 
 	public static VillageComponentAlchemist build(StructureVillagePieces.Start start, List<StructureComponent> piece, Random rand, int par1, int par2, int par3, EnumFacing facing, int par4) {
@@ -67,23 +67,23 @@ public class VillageComponentAlchemist extends StructureVillagePieces.Village {
         }
 
         this.fillWithBlocks(world, sbb, 1, 1, 1, 3, 5, 4, Blocks.air.getDefaultState(), Blocks.air.getDefaultState(), false);
-        this.fillWithBlocks(world, sbb, 0, 0, 0, 3, 0, 4, Blocks.cobblestone.getDefaultState(), Blocks.cobblestone.getDefaultState(), false);
-        this.fillWithBlocks(world, sbb, 1, 0, 1, 2, 0, 3, Blocks.dirt.getDefaultState(), Blocks.dirt.getDefaultState(), false);
+        this.fillWithBlocks(world, sbb, 0, 0, 0, 3, 0, 4, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
+        this.fillWithBlocks(world, sbb, 1, 0, 1, 2, 0, 3, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
 
-        this.setBlockState(world, Blocks.log.getDefaultState(), 1, 4, 0, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 2, 4, 0, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 1, 4, 4, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 2, 4, 4, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 0, 4, 1, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 0, 4, 2, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 0, 4, 3, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 3, 4, 1, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 3, 4, 2, sbb);
-        this.setBlockState(world, Blocks.log.getDefaultState(), 3, 4, 3, sbb);
-        this.fillWithBlocks(world, sbb, 0, 1, 0, 0, 3, 0, Blocks.log.getDefaultState(), Blocks.log.getDefaultState(), false);
-        this.fillWithBlocks(world, sbb, 3, 1, 0, 3, 3, 0, Blocks.log.getDefaultState(), Blocks.log.getDefaultState(), false);
-        this.fillWithBlocks(world, sbb, 0, 1, 4, 0, 3, 4, Blocks.log.getDefaultState(), Blocks.log.getDefaultState(), false);
-        this.fillWithBlocks(world, sbb, 3, 1, 4, 3, 3, 4, Blocks.log.getDefaultState(), Blocks.log.getDefaultState(), false);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 1, 4, 0, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 2, 4, 0, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 1, 4, 4, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 2, 4, 4, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 0, 4, 1, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 0, 4, 2, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 0, 4, 3, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 3, 4, 1, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 3, 4, 2, sbb);
+        this.setBlockState(world, Blocks.diamond_block.getDefaultState(), 3, 4, 3, sbb);
+        this.fillWithBlocks(world, sbb, 0, 1, 0, 0, 3, 0, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
+        this.fillWithBlocks(world, sbb, 3, 1, 0, 3, 3, 0, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
+        this.fillWithBlocks(world, sbb, 0, 1, 4, 0, 3, 4, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
+        this.fillWithBlocks(world, sbb, 3, 1, 4, 3, 3, 4, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
         this.fillWithBlocks(world, sbb, 0, 1, 1, 0, 3, 3, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
         this.fillWithBlocks(world, sbb, 3, 1, 1, 3, 3, 3, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
         this.fillWithBlocks(world, sbb, 1, 1, 0, 2, 3, 0, Blocks.diamond_block.getDefaultState(), Blocks.diamond_block.getDefaultState(), false);
@@ -105,7 +105,7 @@ public class VillageComponentAlchemist extends StructureVillagePieces.Village {
             for (int j = 0; j < 4; ++j)
             {
                 this.clearCurrentPositionBlocksUpwards(world, j, 6, i, sbb);
-                this.replaceAirAndLiquidDownwards(world, Blocks.cobblestone.getDefaultState(), j, -1, i, sbb);
+                this.replaceAirAndLiquidDownwards(world, Blocks.diamond_block.getDefaultState(), j, -1, i, sbb);
             }
         }
 

@@ -1,6 +1,7 @@
 package com.eternal.proxy;
 
 import com.eternal.EternalBlocks;
+import com.eternal.EternalItems;
 import com.eternal.EternalRPG;
 import com.eternal.EternalTabs;
 import com.eternal.dimension.overworld.util.VillageComponentAlchemist;
@@ -33,6 +34,7 @@ public class ProxyCommon {
     public static void preInit(FMLPreInitializationEvent event) {
 		EternalTabs.init();    
 		EternalBlocks.init();
+		EternalItems.init();
 		if (EternalRPG.DEV) RegistryLang.instance.register();
     }
     
