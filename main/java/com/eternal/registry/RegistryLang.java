@@ -35,6 +35,7 @@ public class RegistryLang {
 
 	public void creativeTabs() {
 		writeToFile("itemGroup.eternal.blocks=EternalRPG: Blocks");
+		writeToFile("itemGroup.eternal.items=EternalRPG: Items");
 	}
 	
 	public void achievements() {}
@@ -65,7 +66,7 @@ public class RegistryLang {
 	}
 
 	public static void addMob(String unloc, String finalName) {
-		mobUnloc.add("essence." + unloc);
+		mobUnloc.add("eternalRPG." + unloc);
 		mobFinal.add(finalName);
 	}
 	
