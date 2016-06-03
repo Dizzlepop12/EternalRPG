@@ -7,6 +7,7 @@ import com.eternal.base.ModOre;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.client.model.ModelLoader;
 
 public class EternalBlocks {
 	

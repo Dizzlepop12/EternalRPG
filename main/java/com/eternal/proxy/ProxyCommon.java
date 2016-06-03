@@ -34,8 +34,8 @@ public class ProxyCommon {
     @EventHandler
     public static void preInit(FMLPreInitializationEvent event) {
 		EternalTabs.init();
-		EternalBlocks.init();
-		EternalItems.init();
+		//EternalBlocks.init();
+		//EternalItems.init();
 		if (EternalRPG.DEV) RegistryLang.instance.register();
     }
     
