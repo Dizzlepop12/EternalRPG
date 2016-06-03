@@ -3,10 +3,12 @@ package com.eternal.base;
 import java.util.List;
 
 import com.eternal.EternalItems;
+import com.eternal.EternalRPG;
 import com.eternal.EternalTabs;
 import com.eternal.enums.EnumSounds;
 import com.eternal.registry.RegistryLang;
 
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,6 +16,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -32,6 +35,7 @@ public class ItemMod extends Item {
 		setCreativeTab(tab);
 		EternalItems.itemNames.add(name);
 		GameRegistry.registerItem(this, name);
+		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(EternalRPG.PREFIX));
 	}
 
 	public ItemMod setHealAmount(int healAmount){

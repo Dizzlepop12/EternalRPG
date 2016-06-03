@@ -11,6 +11,7 @@ import com.eternal.registry.RegistryLang;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -32,7 +33,7 @@ public class ProxyCommon {
     
     @EventHandler
     public static void preInit(FMLPreInitializationEvent event) {
-		EternalTabs.init();    
+		EternalTabs.init();
 		EternalBlocks.init();
 		EternalItems.init();
 		if (EternalRPG.DEV) RegistryLang.instance.register();

@@ -10,7 +10,6 @@ public class VillagePieceRegister {
 			MapGenStructureIO.registerStructure(className, structureName); 
 		} 
 		catch (Exception e) {
-
 		}
 	}
 
