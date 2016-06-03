@@ -1,7 +1,7 @@
 {
 	"parent": "builtin/generated",
 	"textures": {
-		"layer0": "eternalRPG:items/frosticCrystal"
+		"layer0": "eternalrpg:items/frosticCrystal"
 	},
 	"display": {
 		"thirdperson": {

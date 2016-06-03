@@ -1,5 +1,6 @@
 package com.eternal.proxy;
 
+import com.dizzle_api.RenderHelper;
 import com.eternal.EternalBlocks;
 import com.eternal.EternalItems;
 import com.eternal.EternalRPG;
@@ -34,8 +35,9 @@ public class ProxyCommon {
     @EventHandler
     public static void preInit(FMLPreInitializationEvent event) {
 		EternalTabs.init();
-		//EternalBlocks.init();
-		//EternalItems.init();
+		EternalBlocks.init();
+		EternalItems.init();
+		RenderHelper.init();
 		if (EternalRPG.DEV) RegistryLang.instance.register();
     }
     

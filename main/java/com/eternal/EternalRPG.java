@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 public class EternalRPG {
 
 	public static final String MOD_NAME = "EternalRPG";
-	public static final String MODID = "eternalRPG";
+	public static final String MODID = "eternalrpg";
 	public static final String PREFIX = MODID + ":";
 	public static final String VERSION = "1.0";
 	public static final boolean DEV = true;

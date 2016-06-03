@@ -1,4 +1,4 @@
-package com.dizzleAPI;
+package com.dizzle_api;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

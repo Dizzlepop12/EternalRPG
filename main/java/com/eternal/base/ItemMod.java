@@ -35,7 +35,6 @@ public class ItemMod extends Item {
 		setCreativeTab(tab);
 		EternalItems.itemNames.add(name);
 		GameRegistry.registerItem(this, name);
-		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(EternalRPG.PREFIX));
 	}
 
 	public ItemMod setHealAmount(int healAmount){

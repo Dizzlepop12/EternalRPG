@@ -7,7 +7,8 @@ import net.minecraft.world.World;
 
 public enum EnumSounds {
 	
-	TEST("eternalRPG:test");
+	TEST("eternalRPG:test"),
+	PORTAL_CREATION("eternalRPG:portalCreation");
 	
 	private String sound;
 

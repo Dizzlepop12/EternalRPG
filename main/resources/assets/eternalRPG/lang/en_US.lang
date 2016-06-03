@@ -1,2 +1,5 @@
+tile.frosticOre.name=Frostic Ore
+tile.infusersTable.name=Infusers Table
+item.frosticCrystal.name=Frostic Crystal
 itemGroup.eternal.blocks=EternalRPG: Blocks
 itemGroup.eternal.items=EternalRPG: Items

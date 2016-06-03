@@ -2,7 +2,7 @@ package com.eternal.base;
 
 import java.util.Random;
 
-import com.dizzleAPI.Sc;
+import com.dizzle_api.Sc;
 import com.eternal.EternalBlocks;
 import com.eternal.EternalRPG;
 import com.eternal.EternalTabs;
