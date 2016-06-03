@@ -9,6 +9,7 @@ import com.eternal.dimension.overworld.util.VillageComponentAlchemist;
 import com.eternal.dimension.overworld.util.VillageHandlerAlchemist;
 import com.eternal.dimension.overworld.util.VillagePieceRegister;
 import com.eternal.registry.RegistryLang;
+import com.eternal.tileentity.TileEntityInfusersTable;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
@@ -18,6 +19,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
 public class ProxyCommon {
@@ -38,6 +40,7 @@ public class ProxyCommon {
 		EternalBlocks.init();
 		EternalItems.init();
 		RenderHelper.init();
+		GameRegistry.registerTileEntity(TileEntityInfusersTable.class, "Infusers Table");
 		if (EternalRPG.DEV) RegistryLang.instance.register();
     }
     
