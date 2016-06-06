@@ -22,12 +22,12 @@ public enum EnumMaterial {
 	SNOW_UNBREAK(Material.barrier, Block.soundTypeSnow),
 	WOOL_UNBREAK(Material.barrier, Block.soundTypeCloth),
 	
-	GRASS(Material.rock, Block.soundTypeGrass),
-	DIRT(Material.rock, Block.soundTypeGravel),
-	WOOD(Material.rock, Block.soundTypeWood),
-	GLASS(Material.rock, Block.soundTypeGlass),
-	SNOW(Material.rock, Block.soundTypeSnow),
-	WOOL(Material.rock, Block.soundTypeCloth);
+	GRASS(Material.grass, Block.soundTypeGrass),
+	DIRT(Material.ground, Block.soundTypeGravel),
+	WOOD(Material.wood, Block.soundTypeWood),
+	GLASS(Material.glass, Block.soundTypeGlass),
+	SNOW(Material.snow, Block.soundTypeSnow),
+	WOOL(Material.cloth, Block.soundTypeCloth);
 	
 	private Material material;
 	private SoundType sound;

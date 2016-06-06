@@ -12,6 +12,7 @@ import com.eternal.registry.RegistryLang;
 import com.eternal.tileentity.TileEntityInfusersTable;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -27,6 +28,7 @@ public class ProxyCommon {
 	public void registerClient() {}
 	public void clientInit(FMLInitializationEvent event) {}
 	public void clientPreInit() {}
+	public void registerModModels() { }
 	
     @EventHandler
     public static void init(FMLInitializationEvent event) {

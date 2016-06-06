@@ -1,6 +1,6 @@
 package com.eternal.blocks;
 
-import com.dizzle_api.GuiHelper.GuiIDs;
+import com.dizzle_api.GuiHelper;
 import com.eternal.EternalRPG;
 import com.eternal.EternalTabs;
 import com.eternal.base.ModBlock;
@@ -20,31 +20,22 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
-public class BlockIcestonePortalCreator extends ModBlockContainer {
+public class BlockInfusersTable extends ModBlockContainer {
 
-	public BlockIcestonePortalCreator(String name, String f) {
+	public BlockInfusersTable(String name, String f) {
 		super(EnumMaterial.GLASS, name, f, 2.0F, EternalTabs.blocks);
 	}
 	
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-		TileEntityInfusersTable tile = (TileEntityInfusersTable)worldIn.getTileEntity(pos);
-		if(!worldIn.isRemote) {
-			if(tile != null) { 
-				playerIn.openGui(EternalRPG.instance, GuiIDs.INFUSERS.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
-			}
-			return true;
-		}
-		
-		else if(worldIn.getBlockState(pos.up()).getBlock() == Blocks.coal_ore && playerIn.getHeldItem() !=null && playerIn.getHeldItem().getItem() == Items.blaze_rod) {
-			worldIn.setBlockState(pos.add(0, 0, 0), Blocks.bookshelf.getDefaultState());
-			worldIn.newExplosion((Entity)null, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, 5.0F, true, true);
-            EnumSounds.playSound(EnumSounds.PORTAL_CREATION, worldIn, playerIn);
-			return true;
-		}
-		return false;
+		if(worldIn.isRemote) return true;
+
+		TileEntity te = worldIn.getTileEntity(pos);
+		if(te == null || playerIn.isSneaking()) return false;
+		playerIn.openGui(EternalRPG.instance, GuiHelper.infusers, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		return true;
 	}
-	
+
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
 		TileEntity tileentity = worldIn.getTileEntity(pos);
