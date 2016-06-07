@@ -8,12 +8,14 @@ import net.minecraft.entity.IMerchant;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.world.World; 
 import net.minecraftforge.fml.common.network.IGuiHandler;
 
 public class GuiHelper implements IGuiHandler {
 	
-	public static int infusers;
+	public static int id = 0;
+	public static int 
+	infusers = id++;
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {

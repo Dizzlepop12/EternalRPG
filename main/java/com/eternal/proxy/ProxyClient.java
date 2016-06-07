@@ -1,5 +1,6 @@
 package com.eternal.proxy;
 
+import com.dizzle_api.GuiHelper;
 import com.dizzle_api.RenderHelper;
 import com.eternal.EternalBlocks;
 import com.eternal.EternalItems;
@@ -12,7 +13,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ProxyClient extends ProxyCommon{
 
 	@Override
-	public void registerClient() {}
+	public void registerClient() {
+		NetworkRegistry.INSTANCE.registerGuiHandler(EternalRPG.instance, new GuiHelper());
+	}
 	
 	@Override
 	public void clientPreInit() {}

@@ -28,12 +28,10 @@ public class BlockInfusersTable extends ModBlockContainer {
 	
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if(worldIn.isRemote) return true;
-
-		TileEntity te = worldIn.getTileEntity(pos);
-		if(te == null || playerIn.isSneaking()) return false;
-		playerIn.openGui(EternalRPG.instance, GuiHelper.infusers, worldIn, pos.getX(), pos.getY(), pos.getZ());
-		return true;
+	    if (!worldIn.isRemote) {
+	        playerIn.openGui(EternalRPG.instance, GuiHelper.infusers, worldIn, pos.getX(), pos.getY(), pos.getZ());
+	    }
+	    return true;
 	}
 
 	@Override
